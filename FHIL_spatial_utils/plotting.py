@@ -42,3 +42,52 @@ def plot_confusion_matrix(x, y, normalize=False, figsize=(8, 6), cmap='Blues', a
     plt.title("Confusion Matrix" + (" (Normalized)" if normalize else ""))
     plt.tight_layout()
     plt.show()
+
+def grid_plot_adata(
+    adata_dict,
+    plot_func,
+    color_keys,
+    plot_kwargs=None,
+    per_row=True,
+    figsize=(4, 4),
+    pass_show=True 
+):
+    """
+    Wrap plots from multiple sc objects into a grid.
+    """
+
+    if plot_kwargs is None:
+        plot_kwargs = {}
+
+    n_rows = len(adata_dict) if per_row else len(color_keys)
+    n_cols = len(color_keys) if per_row else len(adata_dict)
+
+    fig, axes = plt.subplots(n_rows, n_cols, figsize=(figsize[0] * n_cols, figsize[1] * n_rows))
+
+    if n_rows == 1:
+        axes = np.expand_dims(axes, axis=0)
+    if n_cols == 1:
+        axes = np.expand_dims(axes, axis=1)
+
+    for row_i, (obj_name, adata) in enumerate(adata_dict.items() if per_row else color_keys):
+        for col_i, color in enumerate(color_keys if per_row else adata_dict.items()):
+            i, j = (row_i, col_i) if per_row else (col_i, row_i)
+
+            current_adata = adata if per_row else adata_dict[color]
+            current_color = color if per_row else obj_name
+            ax = axes[i, j]
+
+            call_kwargs = {
+                "color": current_color,
+                "ax": ax,
+                **plot_kwargs
+            }
+
+            if pass_show:
+                call_kwargs["show"] = False
+
+            plot_func(current_adata, **call_kwargs)
+            ax.set_title(f"{obj_name} - {current_color}" if per_row else f"{color} - {obj_name}")
+
+    plt.tight_layout()
+    plt.show()

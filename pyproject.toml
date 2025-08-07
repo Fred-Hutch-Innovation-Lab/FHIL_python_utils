@@ -13,7 +13,8 @@ dependencies = [
   "scanpy",
   "seaborn",
   "matplotlib",
-  "pybiomart"
+  "pybiomart",
+  "itertools"
 ]
 [dependency-groups]
 svm = ["sklearn"]
