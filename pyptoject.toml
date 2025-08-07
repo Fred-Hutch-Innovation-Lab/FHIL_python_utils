@@ -1,0 +1,34 @@
+[project]
+name = "spatial_utils"
+version = "0.0.1"
+authors = [
+  { name="Derrik Gratz", email="derrik.gratz@gmail.com" },
+]
+description = "Utility funcitons for spatial RNA analysis"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "pandas",
+  "numpy",
+  "scanpy",
+  "seaborn",
+  "matplotlib",
+  "pybiomart"
+]
+[dependency-groups]
+svm = ["sklearn"]ß
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/Fred-Hutch-Innovation-Lab/spatial_utils"
+Issues = "https://github.com/Fred-Hutch-Innovation-Lab/spatial_utils/issues"
+
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
