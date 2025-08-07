@@ -4,7 +4,7 @@ version = "0.0.2"
 authors = [
   { name="Derrik Gratz", email="derrik.gratz@gmail.com" },
 ]
-description = "Utility funcitons for spatial RNA analysis"
+description = "Utility functions for spatial RNA analysis"
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [
@@ -14,7 +14,7 @@ dependencies = [
   "seaborn",
   "matplotlib",
   "pybiomart",
-  "itertools"
+  "anndata"
 ]
 [dependency-groups]
 svm = ["sklearn"]
