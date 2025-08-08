@@ -40,8 +40,3 @@ __all__ = [
     'plot_confusion_matrix',
     'grid_plot_adata'
 ]
-
-# Package metadata
-__version__ = "0.0.2"
-__author__ = "Derrik Gratz"
-__email__ = "derrik.gratz@gmail.com"

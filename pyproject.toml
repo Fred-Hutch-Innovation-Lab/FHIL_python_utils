@@ -1,6 +1,6 @@
 [project]
 name = "FHIL_spatial_utils"
-version = "0.1.0"
+version = "0.1.1"
 authors = [
   { name="Derrik Gratz", email="derrik.gratz@gmail.com" },
 ]
