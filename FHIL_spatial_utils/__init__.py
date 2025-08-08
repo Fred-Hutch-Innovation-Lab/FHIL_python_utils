@@ -32,5 +32,5 @@ __all__ = [
     'grid_plot_adata'
 ]
 
-__version__ = "0.1.1" 
+__version__ = "0.1.2" 
 
