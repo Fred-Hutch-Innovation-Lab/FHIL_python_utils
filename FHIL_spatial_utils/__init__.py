@@ -9,16 +9,7 @@ This package provides tools for:
 - Confusion matrix visualization
 - Grid plotting for multiple AnnData objects
 - Cluster annotation and consensus calling
-
-Author: Derrik Gratz
 """
-
-# Import core dependencies
-import numpy as np
-import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-from itertools import combinations
 
 # Import functions from modules
 from .svm import (
@@ -40,3 +31,11 @@ __all__ = [
     'plot_confusion_matrix',
     'grid_plot_adata'
 ]
+
+try:
+    from importlib.metadata import version
+except ImportError:  # For Python <3.8
+    from importlib_metadata import version
+
+__version__ = version("yourpackage")
+

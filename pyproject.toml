@@ -1,6 +1,7 @@
 [project]
 name = "FHIL_spatial_utils"
-version = "0.1.1"
+
+dynamic = ["version"]
 authors = [
   { name="Derrik Gratz", email="derrik.gratz@gmail.com" },
 ]
@@ -16,6 +17,9 @@ dependencies = [
   "pybiomart",
   "anndata"
 ]
+
+[tool.setuptools_scm]
+
 [dependency-groups]
 svm = ["sklearn"]
 
