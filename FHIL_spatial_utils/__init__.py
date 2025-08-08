@@ -32,10 +32,5 @@ __all__ = [
     'grid_plot_adata'
 ]
 
-try:
-    from importlib.metadata import version
-except ImportError:  # For Python <3.8
-    from importlib_metadata import version
-
-__version__ = version("yourpackage")
+__version__ = "0.1.1" 
 

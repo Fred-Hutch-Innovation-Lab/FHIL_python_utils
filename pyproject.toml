@@ -18,7 +18,8 @@ dependencies = [
   "anndata"
 ]
 
-[tool.setuptools_scm]
+[tool.hatch.version]
+path = "FHIL_spatial_utils/__init__.py"
 
 [dependency-groups]
 svm = ["sklearn"]
