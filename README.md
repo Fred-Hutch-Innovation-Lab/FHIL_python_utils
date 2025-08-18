@@ -1,6 +1,6 @@
-# FHIL Spatial Utils
+# FHIL Python Utils
 
-A collection of utility functions for spatial RNA analysis, including SVM-based classification and visualization tools for single-cell and spatial transcriptomics data.
+A collection of general utility functions for Python data analysis and visualization, including SVM-based classification and plotting tools for various data types.
 
 ## Available Functions
 
