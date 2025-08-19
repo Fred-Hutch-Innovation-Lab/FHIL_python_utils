@@ -48,4 +48,4 @@ __all__ = [
     'np', 'pd', 'plt', 'sns', 'AnnData'
 ]
 
-__version__ = "0.1.3" 
+__version__ = "0.1.4" 

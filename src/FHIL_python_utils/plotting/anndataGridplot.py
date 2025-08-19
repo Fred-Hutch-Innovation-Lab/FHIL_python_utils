@@ -3,6 +3,7 @@ Grid plotting utilities for AnnData objects.
 """
 
 from typing import Dict, List, Callable, Optional, Tuple
+from anndata import AnnData
 
 
 def anndataGridplot(
