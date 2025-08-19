@@ -10,3 +10,5 @@ from src.FHIL_python_utils import *
 
 # Also make the package itself available
 import src.FHIL_python_utils as FHIL_python_utils
+
+__version__ = "0.1.5"

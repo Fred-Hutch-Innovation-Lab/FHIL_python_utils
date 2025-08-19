@@ -3,7 +3,6 @@ requires = ["setuptools >= 61.2"]
 
 [project]
 name = "FHIL_python_utils"
-version = 0.1.5
 authors = [{ name="Derrik Gratz", email="derrik.gratz@gmail.com" }]
 description = "General utility functions for Python data analysis and visualization at Fred Hutch Innovation Lab"
 readme = "README.md"
@@ -24,6 +23,9 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
 ]
+
+[tool.setuptools.dynamic]
+version = {attr = "FHIL_python_utils.__version__"}
 
 [project.urls]
 Homepage = "https://github.com/Fred-Hutch-Innovation-Lab/FHIL_python_utils"
