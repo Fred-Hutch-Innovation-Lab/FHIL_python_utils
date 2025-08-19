@@ -48,5 +48,5 @@ __all__ = [
     'np', 'pd', 'plt', 'sns', 'AnnData'
 ]
 
-# Version is now managed by Git tags via pyproject.toml 
+__version__ = "0.1.3" 
 

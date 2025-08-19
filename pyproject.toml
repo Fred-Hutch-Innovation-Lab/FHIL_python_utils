@@ -18,11 +18,8 @@ dependencies = [
   "anndata"
 ]
 
-[tool.hatch.version]
-source = "git"
-
-[tool.hatch.build.targets.wheel]
-packages = ["src/FHIL_python_utils"]
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [dependency-groups]
 svm = ["sklearn"]
@@ -39,5 +36,5 @@ Homepage = "https://github.com/Fred-Hutch-Innovation-Lab/python_utils"
 Issues = "https://github.com/Fred-Hutch-Innovation-Lab/python_utils/issues"
 
 [build-system]
-requires = ["hatchling >= 1.26"]
-build-backend = "hatchling.build"
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
