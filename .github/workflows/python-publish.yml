@@ -61,8 +61,6 @@ jobs:
       with:
         repository-url: https://test.pypi.org/legacy/
         verbose: true
-        # Add a unique suffix to avoid conflicts
-        package-dir: dist/
         # Use a test-only flag if available
         skip-existing: true
 

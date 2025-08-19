@@ -7,7 +7,7 @@ for multiple AnnData objects, commonly used in spatial transcriptomics analysis.
 
 from .confusionMatrix import confusionMatrix
 from .anndataGridplot import anndataGridplot
-from .rotate_x_axis_labels import rotateAxisLabels
+from .rotateXAxisLabels import rotateAxisLabels
 
 __all__ = [
     'confusionMatrix',
