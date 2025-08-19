@@ -36,7 +36,7 @@ from .plotting import (
 # Define what gets imported with "from FHIL_python_utils import *"
 __all__ = [
     # SVM functions
-    'featureWeightingHeatmap',
+    'featureWeightHeatmap',
     'classesFromProba', 
     'annotateClustersByConsensus',
     'confusionBubbleMatrix',
@@ -47,5 +47,3 @@ __all__ = [
     # Common packages (available as package.package_name)
     'np', 'pd', 'plt', 'sns', 'AnnData'
 ]
-
-__version__ = "0.1.4" 
