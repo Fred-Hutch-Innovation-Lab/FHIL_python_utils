@@ -19,7 +19,7 @@ dependencies = [
 ]
 
 [tool.hatch.version]
-path = "src/FHIL_python_utils/__init__.py"
+source = "git"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/FHIL_python_utils"]
