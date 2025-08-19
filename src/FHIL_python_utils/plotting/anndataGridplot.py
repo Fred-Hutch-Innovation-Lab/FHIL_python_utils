@@ -4,7 +4,8 @@ Grid plotting utilities for AnnData objects.
 
 from typing import Dict, List, Callable, Optional, Tuple
 from anndata import AnnData
-
+import numpy as np
+import matplotlib.pyplot as plt
 
 def anndataGridplot(
     adata_dict: Dict[str, AnnData],

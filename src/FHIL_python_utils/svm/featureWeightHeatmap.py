@@ -4,8 +4,12 @@ SVM feature weight analysis utilities.
 
 from itertools import combinations
 from typing import Dict, Tuple
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
-def featureWeightingHeatmap(
+def featureWeightHeatmap(
     model: Dict,
     n: int = 5,
     figsize: Tuple[int, int] = (8, 12)

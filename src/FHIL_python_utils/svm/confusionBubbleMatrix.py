@@ -7,6 +7,7 @@ from matplotlib.colorbar import ColorbarBase
 from typing import Union, List, Optional
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
 def confusionBubbleMatrix(
     probs: Union[pd.DataFrame, np.ndarray], 
