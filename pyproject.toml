@@ -14,7 +14,7 @@ requires-python = ">=3.9"
 dependencies = [
   "pandas",
   "numpy",
-  "scanpy",
+  "scanpy>=1.10",
   "seaborn",
   "matplotlib",
   "pybiomart",
