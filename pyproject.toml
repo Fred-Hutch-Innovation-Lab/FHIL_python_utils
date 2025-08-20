@@ -3,7 +3,7 @@ requires = ["setuptools >= 61.2", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools_scm]
-write_to = "mypkg/_version.py"
+write_to = "src/FHIL_python_utils/_version.py"
 
 [project]
 name = "FHIL_python_utils"
