@@ -21,7 +21,7 @@ from anndata import AnnData
 
 # Import functions from submodules
 from .svm import (
-    featureWeightingHeatmap,
+    featureWeightHeatmap,
     classesFromProba,
     annotateClustersByConsensus,
     confusionBubbleMatrix
