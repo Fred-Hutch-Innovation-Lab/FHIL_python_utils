@@ -2,8 +2,10 @@
 Utilities for single-cell analyses
 """
 
-from .nmad_filter import nmad_filter
+from .nmadFilter import nmadFilter
+from .ridgePlot import ridgePlot
 
 __all__ = [
-    'nmad_filter'
+    'nmadFilter',
+    'ridgePlot'
 ]
