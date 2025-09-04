@@ -53,19 +53,35 @@ def confusionBubbleMatrix(
         'pred_prob': pred_probs
     })
 
+    # # Group stats
+    # grouped = (
+    #     df.groupby(['current_label', 'pred_label'])
+    #     .agg(count=('pred_prob', 'count'), median_score=('pred_prob', 'median'))
+    #     # .reset_index(names='count')
+    # )
+
     # Group stats
     grouped = (
         df.groupby(['current_label', 'pred_label'])
         .agg(count=('pred_prob', 'count'), median_score=('pred_prob', 'median'))
-        .reset_index(name='count')
+        .reset_index()  # <-- make labels proper columns
+    )
+
+    grouped['proportion'] = (
+        grouped.groupby('current_label')['count']
+        .transform(lambda x: x / x.sum())
     )
 
     # Compute proportion within each true label
-    total_per_true = df['current_label'].value_counts()
-    grouped['proportion'] = grouped.apply(
-        lambda row: row['count'] / total_per_true[row['current_label']],
-        axis=1
-    )
+    # total_per_true = df['current_label'].value_counts()
+    # grouped['proportion'] = grouped['current_label'].map(total_per_true).rpow(-1) * grouped['count']
+
+    # # Compute proportion within each true label
+    # total_per_true = df['current_label'].value_counts()
+    # grouped['proportion'] = grouped.apply(
+    #     lambda row: row['count'] / total_per_true[row['current_label']],
+    #     axis=1
+    # )
 
     # Set up plot
     true_classes = pd.Index(y_true.categories)
@@ -78,12 +94,16 @@ def confusionBubbleMatrix(
     # norm = plt.Normalize(df['pred_prob'].min(), df['pred_prob'].max())
     norm = plt.Normalize(0, 1)
     cmap = plt.cm.YlGnBu
-    max_dot_size = 800
+    max_radius = 200
+    
+    # Clean bad rows
+    grouped = grouped.dropna(subset=['median_score', 'proportion'])
+    grouped = grouped[grouped['proportion'] > 0]
 
     for _, row in grouped.iterrows():
         x = pred_classes.get_loc(row['pred_label'])
         y = true_classes.get_loc(row['current_label'])
-        size = max_dot_size * row['proportion']
+        size = row['proportion'] * max_radius
         color = cmap(norm(row['median_score']))
         ax.scatter(x, y, s=size, color=color, edgecolor='black', alpha=0.8)
 
@@ -98,7 +118,7 @@ def confusionBubbleMatrix(
     # Size legend
     size_legend_props = [0.1, 0.25, 0.5, 0.75]
     size_handles = [
-        ax.scatter([], [], s=p * max_dot_size, color='gray', alpha=0.6, label=f"{int(p*100)}%")
+        ax.scatter([], [], s=p * max_radius, color='gray', alpha=0.6, label=f"{int(p*100)}%")
         for p in size_legend_props
     ]
     legend1 = ax.legend(
