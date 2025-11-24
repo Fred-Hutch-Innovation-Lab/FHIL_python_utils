@@ -1,3 +1,7 @@
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
 def ridgePlot(objs, metric, x_label, table='obs'):
     plotdata = pd.concat(
         {name: getattr(obj, table) for name, obj in objs.items()},
