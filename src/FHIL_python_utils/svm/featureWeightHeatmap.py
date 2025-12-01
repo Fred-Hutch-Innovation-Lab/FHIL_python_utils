@@ -82,7 +82,7 @@ def featureWeightHeatmap(
     # Find top features for each class
     top_features = {}
     for cls in range(n_classes):
-        weights = class_feature_weights[cls].A1 # if hasattr(class_feature_weights[cls], 'A1') else class_feature_weights[cls]
+        weights = class_feature_weights[cls].A1 if hasattr(class_feature_weights[cls], 'A1') else class_feature_weights[cls]
         top_idx = np.argsort(weights)[::-1][:n]
         top_features[class_labels[cls]] = {
             feature_names[i]: weights[i] for i in top_idx
