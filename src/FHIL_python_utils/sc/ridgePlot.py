@@ -26,11 +26,11 @@ def ridgePlot(objs, metric, x_label, table='obs'):
         fill=True,
         alpha=1,
         linewidth=1)
-    g.map(sns.kdeplot, metric,
-        bw_adjust=0.5,
-        clip_on=False,
-        color="w",
-        lw=1.1)
+    # g.map(sns.kdeplot, metric,
+    #     bw_adjust=0.5,
+    #     clip_on=False,
+    #     color="w",
+    #     lw=1.1)
 
     # g.refline(y=0, linewidth=2, linestyle="-", color=None, clip_on=False)
     # g.refline(x=20, linewidth=1, linestyle='--', color='red')
