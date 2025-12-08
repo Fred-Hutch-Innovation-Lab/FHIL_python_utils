@@ -7,7 +7,7 @@ from matplotlib.collections import RegularPolyCollection
 from matplotlib.widgets import Lasso
 
 
-class LassoManager:
+class SpatialLassoManager:
     """
     Interactive selection of points from a set of spatial coordinates
 
@@ -15,7 +15,7 @@ class LassoManager:
     -----------
     >> %matplotlib widget # If in jupyter notebook
     >> fig, ax = plt.subplots(figsize=(6,6))
-    >> manager = LassoManager(ax, objs['SG_SU9747'].obsm['spatial'], hex_size=5)
+    >> manager = SpatialLassoManager(ax, objs['SG_SU9747'].obsm['spatial'], hex_size=5)
     >> plt.show() ## Circle cells on interactive plot
 
     >> ## points can then be retrieved from the manager as cell IDs
