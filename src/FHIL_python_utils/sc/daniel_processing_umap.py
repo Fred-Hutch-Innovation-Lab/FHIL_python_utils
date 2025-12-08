@@ -1,5 +1,5 @@
 """
-Daniel's custom processing pipeline for single-cell data.
+Daniel's custom processing pipeline for single-cell data. This was somewhat assembled with AI, so inner logic may be imperfect.
 """
 
 import numpy as np
@@ -10,7 +10,6 @@ import leidenalg
 from scanpy.tl import leiden
 
 
-# Private helper functions (not exposed in package)
 def _daniel_normalization(X, min_tx_prop=1e-3):
     """Normalize and log-transform data."""
     if isspmatrix_csr(X):
