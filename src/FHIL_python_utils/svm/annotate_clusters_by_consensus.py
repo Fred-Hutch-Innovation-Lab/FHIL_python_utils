@@ -4,7 +4,7 @@ SVM cluster annotation utilities for consensus-based labeling.
 
 from anndata import AnnData
 
-def annotateClustersByConsensus(
+def annotate_clusters_by_consensus(
     obj: AnnData,
     cluster_column: str = 'over_clustering',
     annotation_column: str = 'svm_predicted_class',
@@ -56,7 +56,7 @@ def annotateClustersByConsensus(
     >>> adata = sc.read_h5ad("your_data.h5ad")
     >>> 
     >>> # Annotate clusters based on SVM predictions
-    >>> annotateClustersByConsensus(
+    >>> annotate_clusters_by_consensus(
     ...     adata,
     ...     cluster_column='leiden_clusters',
     ...     annotation_column='svm_predictions',

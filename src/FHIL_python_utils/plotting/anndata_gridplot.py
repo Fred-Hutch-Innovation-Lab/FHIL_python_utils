@@ -7,7 +7,7 @@ from anndata import AnnData
 import numpy as np
 import matplotlib.pyplot as plt
 
-def anndataGridplot(
+def anndata_gridplot(
     adata_dict: Dict[str, AnnData],
     plot_func: Callable,
     color_keys: List[str],
@@ -70,7 +70,7 @@ def anndataGridplot(
     ...     sc.pl.umap(adata, color=color, ax=ax, show=show)
     >>> 
     >>> # Create grid plot
-    >>> anndataGridplot(  
+    >>> anndata_gridplot(  
     ...     {'PBMC68k': adata1, 'PBMC3k': adata2},
     ...     plot_func=plot_umap,
     ...     color_keys=['leiden', 'louvain'],

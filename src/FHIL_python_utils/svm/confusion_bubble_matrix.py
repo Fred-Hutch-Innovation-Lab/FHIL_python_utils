@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def confusionBubbleMatrix(
+def confusion_bubble_matrix(
     probs: Union[pd.DataFrame, np.ndarray], 
     y_true: Union[List, np.ndarray, pd.Series], 
     class_names: Optional[List[str]] = None

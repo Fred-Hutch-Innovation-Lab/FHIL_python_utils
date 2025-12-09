@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from anndata import AnnData
 from typing import Dict, List, Optional
 
-def multiObjectSpatialScatter(
+def multi_object_spatial_scatter(
     objs: Dict[str, AnnData],
     color_by: List[str],
     spatial_key: str = 'spatial',

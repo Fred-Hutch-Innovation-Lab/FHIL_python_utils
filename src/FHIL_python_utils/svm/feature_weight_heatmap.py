@@ -9,7 +9,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-def featureWeightHeatmap(
+def feature_weight_heatmap(
     model: Dict,
     n: int = 5,
     figsize: Tuple[int, int] = (8, 12)

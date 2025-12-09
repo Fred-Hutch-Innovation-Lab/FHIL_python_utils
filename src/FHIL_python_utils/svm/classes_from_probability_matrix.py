@@ -5,7 +5,7 @@ SVM classification utilities for probability-based predictions.
 from typing import List, Tuple
 import numpy as np
 
-def classesFromProba(
+def classes_from_probability_matrix(
     probs: np.ndarray,
     classes: List[str],
     threshold: float = 0.5,
@@ -49,7 +49,7 @@ def classesFromProba(
     >>> probabilities = svm.predict_proba(X_test)
     >>> 
     >>> # Get class predictions with confidence thresholds
-    >>> detailed_preds, simple_preds = classesFromProba(
+    >>> detailed_preds, simple_preds = classes_from_probability_matrix(
     ...     probabilities, 
     ...     classes=['class_A', 'class_B', 'class_C'],
     ...     threshold=0.6,

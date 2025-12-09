@@ -12,7 +12,7 @@ import seaborn as sns
 from typing import Union, List, Tuple
 
 
-def confusionMatrix(
+def confusion_matrix_plot(
     x: Union[List, np.ndarray, pd.Series],
     y: Union[List, np.ndarray, pd.Series],
     normalize: bool = False,

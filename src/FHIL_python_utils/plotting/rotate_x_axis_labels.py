@@ -4,7 +4,7 @@ Axis label rotation utilities for seaborn plots.
 
 from typing import Any
 
-def rotateAxisLabels(
+def rotate_x_axis_labels(
     plot_obj: Any, 
     rotation: float = 45, 
     rotation_mode: str = 'anchor', 
