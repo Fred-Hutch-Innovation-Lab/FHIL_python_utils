@@ -62,10 +62,10 @@ def confusion_matrix_plot(
     >>> pred_labels = ['A', 'B', 'A', 'B', 'B']
     >>> 
     >>> # Plot confusion matrix
-    >>> confusionMatrix(true_labels, pred_labels)   
+    >>> confusion_matrix_plot(true_labels, pred_labels)   
     >>> 
     >>> # Plot normalized confusion matrix
-    >>> confusionMatrix(true_labels, pred_labels, normalize=True)
+    >>> confusion_matrix_plot(true_labels, pred_labels, normalize=True)
     """
     # Convert inputs to categorical for consistent handling
     x_cat = pd.Categorical(x)

@@ -21,29 +21,29 @@ This package provides tools for:
 
 # # Import functions from submodules
 # from .svm import (
-#     featureWeightHeatmap,
-#     classesFromProba,
-#     annotateClustersByConsensus,
-#     confusionBubbleMatrix
+#     feature_weight_heatmap,
+#     classes_from_probability_matrix,
+#     annotate_clusters_by_consensus,
+#     confusion_bubble_matrix
 # )
 
 # from .plotting import (
-#     confusionMatrix,
-#     anndataGridplot,
-#     rotateAxisLabels
+#     confusion_matrix_plot,
+#     anndata_gridplot,
+#     rotate_x_axis_labels
 # )
 
 # # Define what gets imported with "from FHIL_python_utils import *"
 # __all__ = [
 #     # SVM functions
-#     'featureWeightHeatmap',
-#     'classesFromProba', 
-#     'annotateClustersByConsensus',
-#     'confusionBubbleMatrix',
+#     'feature_weight_heatmap',
+#     'classes_from_probability_matrix', 
+#     'annotate_clusters_by_consensus',
+#     'confusion_bubble_matrix',
 #     # Plotting functions
-#     'confusionMatrix',
-#     'anndataGridplot',
-#     'rotateAxisLabels',
+#     'confusion_matrix_plot',
+#     'anndata_gridplot',
+#     'rotate_x_axis_labels',
 # ]
 
 from ._version import version as __version__

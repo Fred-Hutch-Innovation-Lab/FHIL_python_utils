@@ -56,7 +56,7 @@ def feature_weight_heatmap(
     >>> model = {'svc': ovo_svm}
     >>> 
     >>> # Generate feature weight heatmap
-    >>> featureWeightingHeatmap(model, n=10)
+    >>> feature_weight_heatmap(model, n=10)
     """
     # Extract model components
     svc = model['svc']

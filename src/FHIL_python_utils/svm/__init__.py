@@ -5,14 +5,14 @@ This module provides functions for analyzing SVM models, extracting feature weig
 and performing consensus-based cluster annotation.
 """
 
-from .featureWeightHeatmap import featureWeightHeatmap
-from .classesFromProba import classesFromProba
-from .annotateClustersByConsensus import annotateClustersByConsensus
-from .confusionBubbleMatrix import confusionBubbleMatrix
+from .feature_weight_heatmap import feature_weight_heatmap
+from .classes_from_probability_matrix import classes_from_probability_matrix
+from .annotate_clusters_by_consensus import annotate_clusters_by_consensus
+from .confusion_bubble_matrix import confusion_bubble_matrix
 
 __all__ = [
-    'featureWeightHeatmap',
-    'classesFromProba',
-    'annotateClustersByConsensus',
-    'confusionBubbleMatrix'
+    'feature_weight_heatmap',
+    'classes_from_probability_matrix',
+    'annotate_clusters_by_consensus',
+    'confusion_bubble_matrix'
 ]
