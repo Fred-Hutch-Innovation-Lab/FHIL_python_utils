@@ -8,5 +8,6 @@ from .daniel_processing import daniel_processing
 
 __all__ = [
     'nmad_filter',
-    'ridge_plot'
+    'ridge_plot',
+    'daniel_processing'
 ]

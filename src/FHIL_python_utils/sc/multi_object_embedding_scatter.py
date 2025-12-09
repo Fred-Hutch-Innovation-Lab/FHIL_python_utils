@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from anndata import AnnData
 from typing import Dict, List, Optional
 
-def multiObjectEmbeddingScatter(
+def multi_object_embedding_scatter(
     objs: Dict[str, AnnData],
     color_by: List[str],
     basis: str = 'X_umap',

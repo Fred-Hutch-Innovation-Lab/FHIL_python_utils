@@ -1,7 +1,7 @@
 from scipy.stats import median_abs_deviation
 import numpy as np
 
-def nmadFilter(x, nmad=5):
+def nmad_filter(x, nmad=5):
     """Return a boolean mask for values outside nmad * MAD from the median
     
     Parameters

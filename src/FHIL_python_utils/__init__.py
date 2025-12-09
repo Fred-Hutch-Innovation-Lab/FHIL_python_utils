@@ -11,39 +11,18 @@ This package provides tools for:
 - Cluster annotation and consensus calling
 """
 
-# Import common dependencies at package level for use across all submodules
-# import numpy as np
-# import pandas as pd
-# import matplotlib.pyplot as plt
-# import seaborn as sns
-# from typing import Dict, List, Tuple, Union, Optional, Callable
-# from anndata import AnnData
-
-# # Import functions from submodules
-# from .svm import (
-#     feature_weight_heatmap,
-#     classes_from_probability_matrix,
-#     annotate_clusters_by_consensus,
-#     confusion_bubble_matrix
-# )
-
-# from .plotting import (
-#     confusion_matrix_plot,
-#     anndata_gridplot,
-#     rotate_x_axis_labels
-# )
-
-# # Define what gets imported with "from FHIL_python_utils import *"
-# __all__ = [
-#     # SVM functions
-#     'feature_weight_heatmap',
-#     'classes_from_probability_matrix', 
-#     'annotate_clusters_by_consensus',
-#     'confusion_bubble_matrix',
-#     # Plotting functions
-#     'confusion_matrix_plot',
-#     'anndata_gridplot',
-#     'rotate_x_axis_labels',
-# ]
-
 from ._version import version as __version__
+
+# Import submodules so they're accessible via dir() and direct access
+from . import svm
+from . import plotting
+from . import sc
+from . import spatial
+
+__all__ = [
+    '__version__',
+    'svm',
+    'plotting',
+    'sc',
+    'spatial',
+]
