@@ -45,6 +45,7 @@ def multi_object_embedding_scatter(
                 adata=adata,
                 color=feature,
                 ax=ax,
+                show=False
             )
             ax.set_title(feature)
 
